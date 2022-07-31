@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDO | GeoGebra</title>
+
     <link rel="stylesheet" href="style.css">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -31,15 +32,20 @@
     </div>
     <hr>
 <!-- Fim Banner  -->
-    <h1 id="conceitos_fundamentais">Conceitos Fundamentais - Equações Diferenciais Ordinárias</h1>
-    <!-- Início da história -->
+
+<!-- Inicio do título -->
+<h1 id="conceitos_fundamentais">Conceitos Fundamentais - Equações Diferenciais Ordinárias</h1>
+<!-- Fim do título -->
+
+    
+<!-- Início da história -->
     <h2>História</h2>
     <p> <img src="graph.gif" align="right">
         O estudo sobre as equações diferenciais ordinárias iniciou-se no final do século XVII através de mecanismos do Cálculo Diferencial e Integral desenvolvidos por Gottfried Wilhelm Leibniz (1646-1716), Isaac Newton (1642-1727) e Pierre de Fermat (1601-1665), e há muito tempo esses tipos de equações modelam e resolvem problemas diversos no ramo da Biologia, Matemática, Física, Economia, Engenharia, mas suas soluções não eram tão fáceis. <br />
     </p>  
-    <!-- Fim da história     -->
+<!-- Fim da história     -->
 
-    <!-- Início da Definição -->
+<!-- Início da Definição -->
     <h2>Definição</h2>
         <p>
             Uma <strong>equação diferencial</strong> é uma relação que se dá entre uma função e suas derivadas. Formalmente, uma equação diferencial contém as derivadas ou diferenciais de uma ou mais variáveis dependentes, em relação a uma ou mais variáveis independentes. A função, comumente conhecida como $y$, é vista como variável dependente, enquanto a variável $t$ é denominada como variável independente. As derivadas ordinárias podem ser escritas como $\large \dfrac{dy}{dt},\dfrac{d^2y}{dt^2}, \dfrac{d^3y}{dt^3}, ...$ ou $y', y'', y''',...$. São modelos de equações diferenciais as seguintes equações:
@@ -48,26 +54,142 @@
                 <div style="text-align:center;">
                         $\dfrac{dy}{dt}=3y^2\sin(t+y)$
                 </div>
+                em que $y$ é a variável dependente e $t$ é a variável independente.
             </div>
             <div class="col"><h5>Exemplo 2.</h5>
                 <div style="text-align:center;">
                         $\dfrac{d^2x}{dt^2}+16x=0$
                 </div>
+                em que $x$ é a variável dependente e $t$ é a variável independente.
             </div>
         </div>
             <br><br>
             <p>
                 Resolver uma equação diferencial baseia-se em encontrar uma função que satisfaça a relação entre a função e suas derivadas na equação. Uma definição formal é que para qualquer função $\large \phi$  definida em um intervalo $I$ e que possua $n$ derivadas contínuas nesse mesmo intervalo $I$, ao substituirmos essas derivadas em uma equação diferencial de enésima ordem, nós conseguimos reduzi-la a uma equação identidade.
-                Uma maneira para verificar que uma função dada é uma solução para a equação diferencial é examinar se cada membro da equação tornam-se iguais após a função fornecida ser substituída nessa equação. No exemplo a seguir, vamos verificar se a função fornecida é solução para a equação diferencial dada.
+                Uma maneira para verificar que uma função dada é uma <b>solução</b> para a equação diferencial é examinar se cada membro da equação tornam-se iguais após a função fornecida ser substituída nessa equação. No exemplo a seguir, vamos verificar se a função fornecida é solução para a equação diferencial dada.
             </p>
         </p>
-    <!-- Fim da Definição -->
+<!-- Fim da Definição -->
 
-    <!-- <embed src="https://www.geogebra.org/material/iframe/id/yapcapms/width/1366/height/705/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="1280" height="720"> -->
+<!-- Exemplo 3 -->
+    <div>
+        <h5>Exemplo 3.</h5>
+        <p>
+            Verifique se a função $y(t)=2\sin(t)-\dfrac{1}{3}\cos(2t) $ é solução da equação diferencial $y''+y=\cos(2t)$.
+            <h6 style="font-family:'CMU Serif Roman'; font-size: 20px; color: blue;">Solução</h6>
+            Para resolvemos primeiro precisamos encontrar a segunda derivada da função $y$, logo:
+            \begin{align*}
+            y(t)&=2sen(t)-\frac{1}{3}\cos(2t) \\ y'(t)&=2\cos(t)-\bigg[\frac{1}{3}\cdot(-\sin(2t))\cdot2\bigg]\\ y'(t)&=2\cos(t)+\frac{2}{3}\sin(2t) \\ y''(t)&=-2\sin(t)+\frac{2}{3}\cdot \cos(2t)\cdot2\\ y''(t)&=-2\sin(t)+\frac{4}{3}\cos(2t)
+            \end{align*}   
+            Como ${y'' +y=\cos(2t)}$, ao substituir, teremos:
+            \begin{align*}
+            -2\sin(t)+\frac{4}{3}\cos(2t)+2\sin(t)-\frac{1}{3}\cos(2t)=\cos(2t) \\ {\color{red}\cancel{-2\sin(2t)}}+\frac{4}{3}\cos(2t)+{\color{red}\cancel{2\sin(2t)}}-\frac{1}{3}\cos(2t)=\cos(2t) \\ \frac{4}{3}\cos(2t)-\frac{1}{3}\cos(2t)=\cos(2t) \\ \frac{4\cos(2t)-\cos(2t)}{3}=\cos(2t) \\ \frac{{\color{red}\cancel3}\cos(2t)}{{\color{red}\cancel3}}=\cos(2t) \\ \cos(2t)=\cos(2t)
+            \end{align*}
 
-
-    <div class='embed-container'>
-        <iframe src='https://www.geogebra.org/material/iframe/id/yapcapms/width/1366/height/705/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            Dessa forma, como encontramos a igualdade $\cos(2t)=\cos(2t)$, a função $y(t)$ é uma solução da equação diferencial que foi fornecida. <br>
+            As soluções das equações diferenciais são divididas em soluções <b>explícitas</b> e <b>implícitas</b>. Podemos ter uma solução explícita quando a variável dependente é expressa apenas em termos da variável independente. Já na solução implícita, dada uma equação diferencial em um intervalo $I$, tem que existir pelo menos uma função que satisfaça a relação nessa intervalo.
+    </p>
+    
     </div>
+<!-- Fim Exemplo 3 -->
+
+<!-- Ínicio definição de EDO -->
+    <h2>Equações Diferenciais Ordinárias (EDO)</h2>
+    <p>
+        São equações que envolvem apenas <b>derivadas ordinárias</b> de uma ou mais variáveis dependentes em relação a uma única <b>variável independente</b>. A representação de uma equação diferencial ordinária é expressa da seguinte forma: \[ F\biggr(t, x,\dfrac{dx}{dt},\cdots,\dfrac{d^nx}{dt^n}\biggr)=0\]
+    </p>
+<!-- Fim definição EDO -->
+
+<!-- Início definição EDP -->
+    <h2>Equações Diferenciais Parciais (EDP)</h2>
+    <p>
+        São equações que envolvem duas ou mais <b>variáveis independentes</b> $(x,y,z,t...)$ e derivadas parciais de uma função (variável dependente) $u=u(x,y,z,t...)$. Assim sendo, uma EDP em $n$ variáveis independentes $x_1, x_2, \cdots,x_n$ é uma equação que tem o seguinte formato: \[ F\biggr(x_1,x_2,\cdots,x_n,u,\frac{\partial u}{\partial x_1},\cdots,\frac{\partial u}{\partial x_n}, \frac{\partial^2 u}{\partial x_1^2},\cdots,\frac{\partial^2 u}{\partial x_1 \partial x_n},\cdots,\frac{\partial^ku}{\partial x_n^k}\biggr)=0\]
+    </p>
+<!-- Fim definição EDP -->
+
+<!-- Início definição de ordem ED -->
+    <h2>A ordem de uma Equação Diferencial</h2>
+    <p>
+        Podemos definir que a ordem de uma equação diferencial é a <b>ordem</b> da derivada de maior grau que aparece na equação e pode ser representada como \[F(t, y, y', y'', y''', \cdots,y^{(n)})=0,\] em que $F$ é uma função de $t$, $y$ e suas derivadas $y', y'',\cdots,y^{(n)}$.
+    </p>
+<!-- Fim definição de ordem ED -->
+
+<!-- Início EDO linear e não-linear -->
+    <h2>EDOs Lineares e Não-Lineares</h2>
+    <p>
+        Uma EDO é chamada de linear se $F$ é uma função linear das variáveis $y, y', y'',\cdots,y^{(n)}$ e sua forma geral é
+     \[a_0(t)y^{(n)}+a_1(t)y^{(n-1)}+\cdots +a_n(t)y=g(t). \tag{1} \]
+        Já uma equação não-linear quando não pode ser representada na forma que vimos anteriormente e às vezes elas vêm com um produto $xy$ ou $yy'$.
+    </p>
+
+    <div class="row">
+        <div class="col"><h5>Exemplo de EDO linear</h5>
+            <div style="text-align:center;">
+                    $t^2y''-3ty'+4y=0$
+            </div>
+            <p>A equação acima é <b>linear</b> pois pode ser representada como representamos em $(1)$.</p>
+        </div>
+        <div class="col"><h5>Exemplo de EDO não-linear</h5>
+            <div style="text-align:center;">
+                    $y'''+2e^ty''+yy'=t^4$
+            </div>
+            <p>A equação acima é <b>não-linear</b> pois envolve o produto $yy'$.</p>
+        </div>
+    </div>
+<!-- Fim EDO linear e não-linear -->
+
+<!-- Início sistemas de equações diferenciais -->
+    <h2>Sistemas de Equações Diferenciais Ordinárias</h2>
+    <p>
+        Um sistema de equações diferenciais ordinárias envolve <b>duas ou mais funções desconhecidas</b>, mas todas dependem da mesma variável $t$. Um exemplo é uma equação diferencial que modela uma única população em um ambiente. Se caso chegar outra espécie interagindo e até mesmo competindo no mesmo ambiente, então um modelo que represente a população $x(t)$ e $y(t)$ pode ser representado através de um sistema de equações diferenciais cuja representação é \[ \begin{cases} \dfrac{dx}{dt}=g_1(t, x, y)\\ \\
+\dfrac{dy}{dt}=g_2(t,x,y) \end{cases}.\]
+        Se $g_1$ e $g_2$ forem <b>lineares</b> nas variáveis $x$ e $y$ nós teremos um <b>sistema linear</b>, ou seja, elas podem ser representadas na forma a seguir: \[g_1(t,x,y)=c_1x+c_2x+f_1(t) \quad e \quad g_2(t,x,y)=c_3x+c_4x+f_2(t).\]
+    </p>
+<!-- Fim sistemas de equações diferenciais -->
+
+<!-- Início edo linear de primeira ordem -->
+    <h2>EDOs Lineares de Primeira Ordem</h2>
+    <p>
+        Uma equação linear de primeira ordem pode ser representada, em geral, como: \[y'+p(t)y=g(t), \tag{2}\] em que $f$ e $g$ são funções de $t$ e assumimos que <b>elas são contínuas</b> em um intervalo $\alpha < t< \beta$. Dessa forma, resolver $(2)$ é encontrar funções diferenciáveis que a satisfazem para valores de $t$ em um determinado intervalo. É importante lembrar que uma equação linear <b>não pode envolver</b> nenhum termo não linear (como $yy'$, $y^3$ ou $\sin^2(y')$.
+    </p>
+<!-- Fim edo linear de primeira ordem -->
+
+<!-- Início equação de Bernoulli -->
+    <h2>Equação de Bernoulli</h2>
+    <p>
+        A equação diferencial que puder ser escrita na seguinte forma \[ y'+p(t)y=g(t)y^n, \quad n\in \mathbb{R} \tag{2.1}\] é chamada de <b>equação diferencial de Bernoulli</b>. Se $n=0$ ou $n=1$, a equação $(2.1)$ é <b>linear</b>, do contrário ela é não-linear. Para determinarmos uma solução geral para uma equação de Bernoulli, teremos que fazer a seguinte mudança de variável: \[u(t)=y^{1-n} \tag{2.2}.\] Se aplicarmos a derivação implícita na equação $(2.2)$, iremos obter:
+            \begin{align*} 
+            u'&=(1-n)\cdot y^{1-n-1}\cdot y' \\ 
+            u'&=(1-n)\cdot y^{-n}\cdot y' \tag{2.3}
+            \end{align*}
+        Agora, se nós isolarmos $y'$ em $(2.1)$, nós teremos: \[y'=g(t)y^n-p(t)y. \tag{2.4}\]
+        Com isso, basta substituir $y'$ em $(2.3)$, logo: \begin{align*}
+        u'&=(1-n)\cdot y^{-n}\cdot (gy^n-py) \\ &=(1-n)\cdot y^{-n}\cdot g\cdot y^n - (1-n)\cdot y^{-n}\cdot p \cdot y \\ &=(1-n)\cdot y^{n-n} \cdot g-(1-n)\cdot y^{1-n}\cdot p \\ &= (1-n)\cdot y^0\cdot g-(1-n)\cdot y^{1-n}\cdot p \\ &=(1-n)\cdot g-(1-n)\cdot y^{1-n}\cdot p \\ &= (1-n)\cdot(g-py^{1-n} \tag{2.5})
+        \end{align*}
+        Como em $(2.2)$ nós temos que $u(t)=y^{1-n}$, basta substituir em $(2.5)$, portanto: \begin{align*}   u'&=(1-n)\cdot(g-pu) \\ u'&=(1-n)\cdot g-(1-n)\cdot pu \\ u'+(1-n)pu&=(1-n)g \tag{2.6}\end{align*}
+        Dessa forma, obtemos em $(2.6)$ uma <b>equação diferencial linear</b> na forma expressada em $(2)$.
+    </p>
+<!-- Fim equação de Bernoulli -->
+
+<!-- Início fator integrante -->
+    <h2>Fator Integrante</h2>
+    <p>
+        Uma equação do tipo $(2)$ poderá ser resolvida de maneira direta se pudermos, através de algumas manipulações, expressar o <b>lado esquerdo</b> da equação como uma <b>derivada de um termo único</b>, o que poderá ser encontrado pela multiplicação da equação por um <b>fator apropriado</b>. Para isso, nós realizamos a multiplicação da equação $(2)$ por uma função $\mu(t)$, que resultará em \[\mu(t)y'+\mu(t)p(t)y=\mu(t)g(t). \tag 3\]
+
+        Se nós definirmos $\mu'(t)=\mu(t)\cdot p(t)$, ao substituir em $(3)$, nós teremos: \[\mu(t)y'+\mu'(t)y=\mu(t)g(t) \tag 4\]
+
+        Se nós considerarmos que $\mu(t)$ é estritamente positivo, nós podemos dividir $(4)$ por $\mu(t)$, ficando \begin{align*} \frac{\mu(t)}{\mu(t)}y'+\frac{\mu'(t)}{\mu(t)}y&=\frac{\mu(t)g(t)}{\mu(t)} \\ \frac{{\color{red}\cancel{\mu(t)}}}{\color{red}\cancel{\mu(t)}}y'+\frac{\mu'(t)}{\mu(t)}y&= \frac{{\color{red}\cancel{\mu(t)}}g(t)}{\color{red}\cancel{\mu(t)}} \\ y'+\frac{\mu'(t)}{\mu(t)}y&=g(t) \tag 5\end{align*}
+
+        Se compararmos $(5)$ com $(2)$, podemos observar que \[p(t) = \frac{\mu'(t)}{\mu(t)} \tag 6\]
+
+        Integrando $(6)$ em ambos os lados, temos: \[\displaystyle\int{p(t)} \ dt = \displaystyle\int{\frac{\mu'(t)}{\mu(t)}} \ dt \tag 7\]
+
+        Pela regra de cadeia, sabemos que \[\frac{d}{dt}[\ln(\mu(t))] = \frac{1}{\mu(t)}\cdot \mu'(t) = \frac{\mu'(t)}{\mu(t)}.\]
+
+        Logo, voltando para $(7)$ e integrando o segundo membro, ficaremos com \[\displaystyle\int{p(t)} \ dt = \displaystyle\int{\frac{\mu'(t)}{\mu(t)}}\ dt \\ \displaystyle\int{p(t)} \ dt = \ln[\mu(t)] + C \tag 9\]
+    </p>
+
+
+
     </body>
 </html>
