@@ -48,7 +48,7 @@
 <!-- Início da Definição -->
     <h2>Definição</h2>
         <p>
-            Uma <strong>equação diferencial</strong> é uma relação que se dá entre uma função e suas derivadas. Formalmente, uma equação diferencial contém as derivadas ou diferenciais de uma ou mais variáveis dependentes, em relação a uma ou mais variáveis independentes. A função, comumente conhecida como $y$, é vista como variável dependente, enquanto a variável $t$ é denominada como variável independente. As derivadas ordinárias podem ser escritas como $\large \dfrac{dy}{dt},\dfrac{d^2y}{dt^2}, \dfrac{d^3y}{dt^3}, ...$ ou $y', y'', y''',...$. São modelos de equações diferenciais as seguintes equações:
+            Uma <strong>equação diferencial</strong> é uma relação que se dá entre uma função e suas derivadas. Formalmente, uma equação diferencial contém as derivadas ou diferenciais de uma ou mais variáveis dependentes, em relação a uma ou mais variáveis independentes. A função, comumente conhecida como $y$, é vista como variável dependente, enquanto a variável $t$ é denominada como variável independente. As derivadas ordinárias podem ser escritas como $\dfrac{dy}{dt},\dfrac{d^2y}{dt^2}, \dfrac{d^3y}{dt^3}, ...$ ou $y', y'', y''',...$. São modelos de equações diferenciais as seguintes equações:
         <div class="row">
             <div class="col"><h5>Exemplo 1.</h5>
                 <div style="text-align:center;">
@@ -186,8 +186,67 @@
 
         Pela regra de cadeia, sabemos que \[\frac{d}{dt}[\ln(\mu(t))] = \frac{1}{\mu(t)}\cdot \mu'(t) = \frac{\mu'(t)}{\mu(t)}.\]
 
-        Logo, voltando para $(7)$ e integrando o segundo membro, ficaremos com \[\displaystyle\int{p(t)} \ dt = \displaystyle\int{\frac{\mu'(t)}{\mu(t)}}\ dt \\ \displaystyle\int{p(t)} \ dt = \ln[\mu(t)] + C \tag 9\]
+        Logo, voltando para $(7)$ e integrando o segundo membro, ficaremos com \begin{align*} \displaystyle\int{p(t)} \ dt = \displaystyle\int{\frac{\mu'(t)}{\mu(t)}}\ dt \\ 
+        \displaystyle\int{p(t)} \ dt = \ln[\mu(t)] + C \tag 9\end{align*}
+
+        Aplicando a exponencial em ambos os lados em $(9)$, teremos \begin{align*} e^{\int{p(t)}dt} &= e^{\ln[\mu(t)] + C} \\ e^{\int{p(t)}dt} &= e^{\ln[\mu(t)]}\cdot e^{C} \\ e^{\int{p(t)}dt} &= \mu(t)\cdot e^C\end{align*}
+
+        Nós definimos que o fator integrante multiplicará toda a equação $(2)$ e embora existam infinitas opções para múltiplos de $e^{\int{p(t)}dt}$, todos irão produzir os mesmos resultados. Dessa forma, podemos tomar $C=0$, logo \begin{align*} 
+        e^{\int{p(t)}dt} &= \mu(t)\cdot e^C \\ e^{\int{p(t)}dt} &= \mu(t)\cdot e^0 \\ e^{\int{p(t)}dt} &= \mu(t)\cdot 1 \\ e^{\int{p(t)}dt}&= \mu(t) \tag{10}\end{align*}
+
+        Acima nós descobrimos o fator integrante, agora se nós voltarmos para $(4)$, podemos observar que $\mu(t)y'+\mu'(t)y$ é exatamente a derivada de um produto, pois \[\dfrac{d}{dt}[\mu(t)\cdot y]=\mu(t)y'+\mu'(t)y \tag{11}\]
+
+        Substituindo $\mu(t)y'+\mu'(t)y$ por $\dfrac{d}{dt}[\mu(t)\cdot y]$ em $(4)$, teremos que o primeiro membro da nossa equação será igual a \begin{align*} \mu(t)y'+\mu'(t)y&=\mu(t)g(t) \\ \frac{d}{dt}[\mu(t)\cdot y] &= \mu(t)g(t). \tag{12}\end{align*}
+
+        Integrando $(12)$ em ambos os lados: \[\displaystyle\int{\frac{d}{dt}[\mu(t)\cdot y]} \ dt = \displaystyle\int{\mu(t)g(t)} \ dt \tag{13}\]
+
+        Sabemos que a integral da derivada de uma função $f$ é a própria função $f$, logo: \[\mu(t)\cdot y = \displaystyle\int{\mu(t)g(t)} \ dt +K\]
+
+        Isolando $y$, ficaremos com seguinte solução geral de uma equação diferencial \[
+        y=\frac{1}{\mu(t)}\Big[\displaystyle\int{\mu(t)g(t)\,dt +K\Big]},\] em que $K$ é uma constante de integração e $\mu(t)$ é dado por $e^{\int{p(t)}\,dt}$. Desse modo, nós descobrimos a solução geral de uma EDO e é importante citar que toda solução de $(2)$ satisfaz a equação abaixo \[y=\frac{1}{\mu(t)}\Big[\displaystyle\int{\mu(t)g(t)dt +K\Big]}, \quad \text{com}\ \mu(t)=e^{\int{p(t)}dt} \tag{14}\].
+
+        Geometricamente $(14)$ define uma família de curvas dado determinado valor de $K$. 
     </p>
+    <h5>Exemplo 4.</h5>
+    <p>
+        Resolva a seguinte equação diferencial $y'-3y=0$
+    </p>
+    <h6 style="font-family:'CMU Serif Roman'; font-size: 20px; color: blue;">Solução</h6>
+    <p>
+        Se nós compararmos a equação acima com a equação $(2)$, temos que $p(t) = -3$. Como nosso fator de integração é dado por $e^{\int{p(t)}\,dt}$, basta substituirmos $p(t)$, logo: \begin{align*} \mu(t) &= e^{\int{p(t)}dt} \\ \mu(t)&=e^{\int{-3}\ dt} \\ \mu(t)&=e^{-3t+C_1}\end{align*}
+
+        Como em $(10)$ admitimos que a constante pode ser tomada igual a zero, temos que $C_1=0$, assim: \begin{align*}\mu(t)&=e^{-3t+C_1} \\ \mu(t)&=e^{-3t+0} \\ \mu(t)&=e^{-3t} \end{align*}
+
+        Dessa forma, como devemos multiplicar o fator integrante em ambos os membros da equação que foi fornecida, teremos: \begin{align*}e^{-3t}\cdot y'-3y\cdot e^{-3t}&=e^{-3t}\cdot 0 \\ e^{-3t}\cdot y' -3e^{-3t}y&=0 \end{align*}
+
+        Como também já admitimos em $(12) $ que todo o primeiro membro da nossa equação será igual a derivada de um produto, ficaremos com a seguinte equação: \[\frac{d}{dt}[e^{-3t}\cdot y]=0\]
+
+        Integrando a equação acima em ambos os lados:  \begin{align*} \int{\frac{d}{dt}[e^{-3t}\cdot y]\ dt}&=\int{0} \ dt \\ e^{-3t}\cdot y&=0+C_2\\ e^{-3t}\cdot y&=C_2 \\y&=\frac{C_2}{e^{-3t}} \\ y&=e^{3t}\cdot C_2 \end{align*}
+
+        Portanto, temos que a solução para $y'-3y=0$ é igual a  $e^{-3t}\cdot y=C_2$ ou $y=e^{3t}\cdot C_2$.
+
+    </p>
+<!-- Fim fator integrante -->
+
+<!-- Início PVI -->
+    <h2>Problema de Valor Inicial (PVI)</h2>
+    <p>
+        Ao resolvermos uma equação diferencial nós podemos encontrar um conjunto de soluções o qual chamamos de <b>solução geral</b>. Nesse sentido, para encontrarmos a solução particular de uma de uma equação diferencial, nós teremos que tomar como base uma condição inicial dessa equação, ou seja, quando $y(t_0)=y_0$. Dessa forma, se conhecermos algumas condições do problema, nós podemos determinar as soluções particulares para a equação diferencial que foi fornecida.
+        <h5>Exemplo</h5>
+        Resolva o seguinte problema de valor inicial \[y'=\frac{dy}{dt}=3y,\quad y(0)=5,7.\]
+
+        Primeiro, antes de resolvermos vamos colocar a equação acima na forma geral expressada em $(2)$: \[y'-3y=0.\]
+
+        Com isso, obtemos a mesma equação que utilizamos no <b>exemplo 4</b>, cuja solução geral da equação é \[y(t)=C_2e^{3t}.\]
+
+        A partir dessa solução geral e da condição inicial que foi dada, nós obtemos: \[\begin{align*} y(0)&=C_2\cdot e^{3\cdot0} \\ 5,7&=C_2\cdot e^0 \\ 5,7&=C_2\cdot 1 \\ C_2&=5,7\end{align*}\]
+
+        Dessa forma, o problema de valor inicial possui a solução \[y(t)=5,7e^{3t}.\]
+    </p>
+<!-- Fim PVI  -->
+
+<!-- Início da resolução dos problemas -->
+<h1>Exemplos práticos utilizando o applet de resolução de Equações Diferenciais Ordinárias desenvolvido no Geogebra</h1>
 
 
 
