@@ -36,13 +36,13 @@
 <!-- Inicio do título -->
 <h1 id="conceitos_fundamentais">Conceitos Fundamentais - Equações Diferenciais Ordinárias</h1>
 <!-- Fim do título -->
-
     
 <!-- Início da história -->
-    <h2>História</h2>
-    <p> <img src="graph.gif" align="right">
-        O estudo sobre as equações diferenciais ordinárias iniciou-se no final do século XVII através de mecanismos do Cálculo Diferencial e Integral desenvolvidos por Gottfried Wilhelm Leibniz (1646-1716), Isaac Newton (1642-1727) e Pierre de Fermat (1601-1665), e há muito tempo esses tipos de equações modelam e resolvem problemas diversos no ramo da Biologia, Matemática, Física, Economia, Engenharia, mas suas soluções não eram tão fáceis. <br />
-    </p>  
+        <h2>História</h2>
+            <p> 
+                <img src="graph.gif" align="right" alt="Gif de curvas animadas." style="max-width: 300px;">
+                O estudo sobre as equações diferenciais ordinárias iniciou-se no final do século XVII através de mecanismos do Cálculo Diferencial e Integral desenvolvidos por Gottfried Wilhelm Leibniz (1646-1716), Isaac Newton (1642-1727) e Pierre de Fermat (1601-1665), e há muito tempo esses tipos de equações modelam e resolvem problemas diversos no ramo da Biologia, Matemática, Física, Economia, Engenharia, mas suas soluções não eram tão fáceis. <br />
+            </p>
 <!-- Fim da história     -->
 
 <!-- Início da Definição -->
@@ -72,38 +72,42 @@
 <!-- Fim da Definição -->
 
 <!-- Exemplo 3 -->
-    <div>
+    
         <h5>Exemplo 3.</h5>
         <p>
             Verifique se a função $y(t)=2\sin(t)-\dfrac{1}{3}\cos(2t) $ é solução da equação diferencial $y''+y=\cos(2t)$.
             <h6 style="font-family:'CMU Serif Roman'; font-size: 20px; color: blue;">Solução</h6>
             Para resolvemos primeiro precisamos encontrar a segunda derivada da função $y$, logo:
-            \begin{align*}
-            y(t)&=2sen(t)-\frac{1}{3}\cos(2t) \\ y'(t)&=2\cos(t)-\bigg[\frac{1}{3}\cdot(-\sin(2t))\cdot2\bigg]\\ y'(t)&=2\cos(t)+\frac{2}{3}\sin(2t) \\ y''(t)&=-2\sin(t)+\frac{2}{3}\cdot \cos(2t)\cdot2\\ y''(t)&=-2\sin(t)+\frac{4}{3}\cos(2t)
-            \end{align*}   
-            Como ${y'' +y=\cos(2t)}$, ao substituir, teremos:
-            \begin{align*}
-            -2\sin(t)+\frac{4}{3}\cos(2t)+2\sin(t)-\frac{1}{3}\cos(2t)=\cos(2t) \\ {\color{red}\cancel{-2\sin(2t)}}+\frac{4}{3}\cos(2t)+{\color{red}\cancel{2\sin(2t)}}-\frac{1}{3}\cos(2t)=\cos(2t) \\ \frac{4}{3}\cos(2t)-\frac{1}{3}\cos(2t)=\cos(2t) \\ \frac{4\cos(2t)-\cos(2t)}{3}=\cos(2t) \\ \frac{{\color{red}\cancel3}\cos(2t)}{{\color{red}\cancel3}}=\cos(2t) \\ \cos(2t)=\cos(2t)
-            \end{align*}
-
+            <div class="equationr">
+                \begin{align*}
+                y(t)&=2sen(t)-\frac{1}{3}\cos(2t) \\ y'(t)&=2\cos(t)-\bigg[\frac{1}{3}\cdot(-\sin(2t))\cdot2\bigg]\\ y'(t)&=2\cos(t)+\frac{2}{3}\sin(2t) \\ y''(t)&=-2\sin(t)+\frac{2}{3}\cdot \cos(2t)\cdot2\\ y''(t)&=-2\sin(t)+\frac{4}{3}\cos(2t)
+                \end{align*}
+            </div>   
+                Como ${y'' +y=\cos(2t)}$, ao substituir, teremos:
+            <div class="equationr">
+                \begin{align*}
+                -2\sin(t)+\frac{4}{3}\cos(2t)+2\sin(t)-\frac{1}{3}\cos(2t)=\cos(2t) \\ {\color{red}\cancel{-2\sin(2t)}}+\frac{4}{3}\cos(2t)+{\color{red}\cancel{2\sin(2t)}}-\frac{1}{3}\cos(2t)=\cos(2t) \\ \frac{4}{3}\cos(2t)-\frac{1}{3}\cos(2t)=\cos(2t) \\ \frac{4\cos(2t)-\cos(2t)}{3}=\cos(2t) \\ \frac{{\color{red}\cancel3}\cos(2t)}{{\color{red}\cancel3}}=\cos(2t) \\ \cos(2t)=\cos(2t)
+                \end{align*}
+            </div>
             Dessa forma, como encontramos a igualdade $\cos(2t)=\cos(2t)$, a função $y(t)$ é uma solução da equação diferencial que foi fornecida. <br>
             As soluções das equações diferenciais são divididas em soluções <b>explícitas</b> e <b>implícitas</b>. Podemos ter uma solução explícita quando a variável dependente é expressa apenas em termos da variável independente. Já na solução implícita, dada uma equação diferencial em um intervalo $I$, tem que existir pelo menos uma função que satisfaça a relação nessa intervalo.
-    </p>
-    
-    </div>
+        </p>
 <!-- Fim Exemplo 3 -->
 
 <!-- Ínicio definição de EDO -->
     <h2>Equações Diferenciais Ordinárias (EDO)</h2>
     <p>
-        São equações que envolvem apenas <b>derivadas ordinárias</b> de uma ou mais variáveis dependentes em relação a uma única <b>variável independente</b>. A representação de uma equação diferencial ordinária é expressa da seguinte forma: \[ F\biggr(t, x,\dfrac{dx}{dt},\cdots,\dfrac{d^nx}{dt^n}\biggr)=0\]
+        São equações que envolvem apenas <b>derivadas ordinárias</b> de uma ou mais variáveis dependentes em relação a uma única <b>variável independente</b>. A representação de uma equação diferencial ordinária é expressa da seguinte forma: <div class="equationr">\[ F\biggr(t, x,\dfrac{dx}{dt},\cdots,\dfrac{d^nx}{dt^n}\biggr)=0\]</div>
     </p>
 <!-- Fim definição EDO -->
 
 <!-- Início definição EDP -->
     <h2>Equações Diferenciais Parciais (EDP)</h2>
     <p>
-        São equações que envolvem duas ou mais <b>variáveis independentes</b> $(x,y,z,t...)$ e derivadas parciais de uma função (variável dependente) $u=u(x,y,z,t...)$. Assim sendo, uma EDP em $n$ variáveis independentes $x_1, x_2, \cdots,x_n$ é uma equação que tem o seguinte formato: \[ F\biggr(x_1,x_2,\cdots,x_n,u,\frac{\partial u}{\partial x_1},\cdots,\frac{\partial u}{\partial x_n}, \frac{\partial^2 u}{\partial x_1^2},\cdots,\frac{\partial^2 u}{\partial x_1 \partial x_n},\cdots,\frac{\partial^ku}{\partial x_n^k}\biggr)=0\]
+        São equações que envolvem duas ou mais <b>variáveis independentes</b> $(x,y,z,t...)$ e derivadas parciais de uma função (variável dependente) $u=u(x,y,z,t...)$. Assim sendo, uma EDP em $n$ variáveis independentes $x_1, x_2, \cdots,x_n$ é uma equação que tem o seguinte formato: 
+            <div class="equationr">
+                <p>\[ F\biggr(x_1,x_2,\cdots,x_n,u,\frac{\partial u}{\partial x_1},\cdots,\frac{\partial u}{\partial x_n}, \frac{\partial^2 u}{\partial x_1^2},\cdots,\frac{\partial^2 u}{\partial x_1 \partial x_n},\cdots,\frac{\partial^ku}{\partial x_n^k}\biggr)=0\]</p>
+            </div>
     </p>
 <!-- Fim definição EDP -->
 
@@ -118,7 +122,7 @@
     <h2>EDOs Lineares e Não-Lineares</h2>
     <p>
         Uma EDO é chamada de linear se $F$ é uma função linear das variáveis $y, y', y'',\cdots,y^{(n)}$ e sua forma geral é
-     \[a_0(t)y^{(n)}+a_1(t)y^{(n-1)}+\cdots +a_n(t)y=g(t). \tag{1} \]
+        <div class="equationr">\[a_0(t)y^{(n)}+a_1(t)y^{(n-1)}+\cdots +a_n(t)y=g(t). \tag{1} \]</div>
         Já uma equação não-linear quando não pode ser representada na forma que vimos anteriormente e às vezes elas vêm com um produto $xy$ ou $yy'$.
     </p>
 
@@ -141,9 +145,15 @@
 <!-- Início sistemas de equações diferenciais -->
     <h2>Sistemas de Equações Diferenciais Ordinárias</h2>
     <p>
-        Um sistema de equações diferenciais ordinárias envolve <b>duas ou mais funções desconhecidas</b>, mas todas dependem da mesma variável $t$. Um exemplo é uma equação diferencial que modela uma única população em um ambiente. Se caso chegar outra espécie interagindo e até mesmo competindo no mesmo ambiente, então um modelo que represente a população $x(t)$ e $y(t)$ pode ser representado através de um sistema de equações diferenciais cuja representação é \[ \begin{cases} \dfrac{dx}{dt}=g_1(t, x, y)\\ \\
-\dfrac{dy}{dt}=g_2(t,x,y) \end{cases}.\]
-        Se $g_1$ e $g_2$ forem <b>lineares</b> nas variáveis $x$ e $y$ nós teremos um <b>sistema linear</b>, ou seja, elas podem ser representadas na forma a seguir: \[g_1(t,x,y)=c_1x+c_2x+f_1(t) \quad e \quad g_2(t,x,y)=c_3x+c_4x+f_2(t).\]
+        Um sistema de equações diferenciais ordinárias envolve <b>duas ou mais funções desconhecidas</b>, mas todas dependem da mesma variável $t$. Um exemplo é uma equação diferencial que modela uma única população em um ambiente. Se caso chegar outra espécie interagindo e até mesmo competindo no mesmo ambiente, então um modelo que represente a população $x(t)$ e $y(t)$ pode ser representado através de um sistema de equações diferenciais cuja representação é 
+        <div class="equationr"> 
+            \begin{cases} \dfrac{dx}{dt}=g_1(t, x, y)\\ \\ \dfrac{dy}{dt}=g_2(t,x,y) \end{cases}.
+        </div>
+
+        Se $g_1$ e $g_2$ forem <b>lineares</b> nas variáveis $x$ e $y$ nós teremos um <b>sistema linear</b>, ou seja, elas podem ser representadas na forma a seguir: 
+        <div class="equationr">
+            \[g_1(t,x,y)=c_1x+c_2x+f_1(t) \quad e \quad g_2(t,x,y)=c_3x+c_4x+f_2(t).\]
+        </div>
     </p>
 <!-- Fim sistemas de equações diferenciais -->
 
@@ -247,7 +257,6 @@
 
 <!-- Início da resolução dos problemas -->
 <h1>Exemplos práticos utilizando o applet de resolução de Equações Diferenciais Ordinárias desenvolvido no Geogebra</h1>
-
 
 
     </body>
