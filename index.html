@@ -16,6 +16,15 @@
 <script type="text/javascript"
         src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Register.StartupHook('TeX Jax Ready', function () {
+      MathJax.InputJax.TeX.prefilterHooks.Add(function (data) {
+        data.math = data.math.replace(/^% <!\[CDATA\[/, '').replace(/%\]\]>$/, '');
+      });
+    });
+    </script>
+
 </head>
 <!-- Banner -->
     <div style="font-family:'CMU Serif Roman';" align="center">
@@ -60,6 +69,6 @@
         </p>
     <!-- Fim da Definição -->
 
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS- MML_HTMLorMML" type="text/javascript" ></script>
+    
     </body>
 </html>
