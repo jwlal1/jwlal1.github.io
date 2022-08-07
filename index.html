@@ -70,30 +70,34 @@
             </p>
         </p>
 <!-- Fim da Definição -->
-
+<hr>
 <!-- Exemplo 3 -->
-    
         <h5>Exemplo 3.</h5>
-        <p>
+
             Verifique se a função $y(t)=2\sin(t)-\dfrac{1}{3}\cos(2t) $ é solução da equação diferencial $y''+y=\cos(2t)$.
-            <h6 style="font-family:'CMU Serif Roman'; font-size: 20px; color: blue;">Solução</h6>
-            Para resolvemos primeiro precisamos encontrar a segunda derivada da função $y$, logo:
+            <h4 style="font-family:'CMU Serif Roman'; color: blue;">Solução</h4>
+            
+            <p>Para resolvemos primeiro precisamos encontrar a segunda derivada da função $y$, logo:</p>
             <div class="equationr">
                 \begin{align*}
                 y(t)&=2sen(t)-\frac{1}{3}\cos(2t) \\ y'(t)&=2\cos(t)-\bigg[\frac{1}{3}\cdot(-\sin(2t))\cdot2\bigg]\\ y'(t)&=2\cos(t)+\frac{2}{3}\sin(2t) \\ y''(t)&=-2\sin(t)+\frac{2}{3}\cdot \cos(2t)\cdot2\\ y''(t)&=-2\sin(t)+\frac{4}{3}\cos(2t)
                 \end{align*}
             </div>   
+            <p>
                 Como ${y'' +y=\cos(2t)}$, ao substituir, teremos:
+            </p>
             <div class="equationr">
                 \begin{align*}
                 -2\sin(t)+\frac{4}{3}\cos(2t)+2\sin(t)-\frac{1}{3}\cos(2t)=\cos(2t) \\ {\color{red}\cancel{-2\sin(2t)}}+\frac{4}{3}\cos(2t)+{\color{red}\cancel{2\sin(2t)}}-\frac{1}{3}\cos(2t)=\cos(2t) \\ \frac{4}{3}\cos(2t)-\frac{1}{3}\cos(2t)=\cos(2t) \\ \frac{4\cos(2t)-\cos(2t)}{3}=\cos(2t) \\ \frac{{\color{red}\cancel3}\cos(2t)}{{\color{red}\cancel3}}=\cos(2t) \\ \cos(2t)=\cos(2t)
                 \end{align*}
             </div>
-            Dessa forma, como encontramos a igualdade $\cos(2t)=\cos(2t)$, a função $y(t)$ é uma solução da equação diferencial que foi fornecida. <br>
-            As soluções das equações diferenciais são divididas em soluções <b>explícitas</b> e <b>implícitas</b>. Podemos ter uma solução explícita quando a variável dependente é expressa apenas em termos da variável independente. Já na solução implícita, dada uma equação diferencial em um intervalo $I$, tem que existir pelo menos uma função que satisfaça a relação nessa intervalo.
-        </p>
+            <p>
+                Dessa forma, como encontramos a igualdade $\cos(2t)=\cos(2t)$, a função $y(t)$ é uma solução da equação diferencial que foi fornecida. <br>
+                As soluções das equações diferenciais são divididas em soluções <b>explícitas</b> e <b>implícitas</b>. Podemos ter uma solução explícita quando a variável dependente é expressa apenas em termos da variável independente. Já na solução implícita, dada uma equação diferencial em um intervalo $I$, tem que existir pelo menos uma função que satisfaça a relação nessa intervalo.
+            </p>
+        
 <!-- Fim Exemplo 3 -->
-
+<hr>
 <!-- Ínicio definição de EDO -->
     <h2>Equações Diferenciais Ordinárias (EDO)</h2>
     <p>
@@ -173,10 +177,17 @@
             u'&=(1-n)\cdot y^{-n}\cdot y' \tag{2.3}
             \end{align*}
         Agora, se nós isolarmos $y'$ em $(2.1)$, nós teremos: \[y'=g(t)y^n-p(t)y. \tag{2.4}\]
-        Com isso, basta substituir $y'$ em $(2.3)$, logo: \begin{align*}
-        u'&=(1-n)\cdot y^{-n}\cdot (gy^n-py) \\ &=(1-n)\cdot y^{-n}\cdot g\cdot y^n - (1-n)\cdot y^{-n}\cdot p \cdot y \\ &=(1-n)\cdot y^{n-n} \cdot g-(1-n)\cdot y^{1-n}\cdot p \\ &= (1-n)\cdot y^0\cdot g-(1-n)\cdot y^{1-n}\cdot p \\ &=(1-n)\cdot g-(1-n)\cdot y^{1-n}\cdot p \\ &= (1-n)\cdot(g-py^{1-n} \tag{2.5})
-        \end{align*}
-        Como em $(2.2)$ nós temos que $u(t)=y^{1-n}$, basta substituir em $(2.5)$, portanto: \begin{align*}   u'&=(1-n)\cdot(g-pu) \\ u'&=(1-n)\cdot g-(1-n)\cdot pu \\ u'+(1-n)pu&=(1-n)g \tag{2.6}\end{align*}
+        Com isso, basta substituir $y'$ em $(2.3)$, logo: 
+        <div class="equationr">
+            \begin{align*}
+            u'&=(1-n)\cdot y^{-n}\cdot (gy^n-py) \\ &=(1-n)\cdot y^{-n}\cdot g\cdot y^n - (1-n)\cdot y^{-n}\cdot p \cdot y \\ &=(1-n)\cdot y^{n-n} \cdot g-(1-n)\cdot y^{1-n}\cdot p \\ &= (1-n)\cdot y^0\cdot g-(1-n)\cdot y^{1-n}\cdot p \\ &=(1-n)\cdot g-(1-n)\cdot y^{1-n}\cdot p \\ &= (1-n)\cdot(g-py^{1-n} \tag{2.5})
+            \end{align*}
+        </div>
+        
+        Como em $(2.2)$ nós temos que $u(t)=y^{1-n}$, basta substituir em $(2.5)$, portanto: 
+        <div class="equationr">
+            \begin{align*}   u'&=(1-n)\cdot(g-pu) \\ u'&=(1-n)\cdot g-(1-n)\cdot pu \\ u'+(1-n)pu&=(1-n)g \tag{2.6}\end{align*}
+        </div>
         Dessa forma, obtemos em $(2.6)$ uma <b>equação diferencial linear</b> na forma expressada em $(2)$.
     </p>
 <!-- Fim equação de Bernoulli -->
@@ -184,11 +195,17 @@
 <!-- Início fator integrante -->
     <h2>Fator Integrante</h2>
     <p>
-        Uma equação do tipo $(2)$ poderá ser resolvida de maneira direta se pudermos, através de algumas manipulações, expressar o <b>lado esquerdo</b> da equação como uma <b>derivada de um termo único</b>, o que poderá ser encontrado pela multiplicação da equação por um <b>fator apropriado</b>. Para isso, nós realizamos a multiplicação da equação $(2)$ por uma função $\mu(t)$, que resultará em \[\mu(t)y'+\mu(t)p(t)y=\mu(t)g(t). \tag 3\]
+        Uma equação do tipo $(2)$ poderá ser resolvida de maneira direta se pudermos, através de algumas manipulações, expressar o <b>lado esquerdo</b> da equação como uma <b>derivada de um termo único</b>, o que poderá ser encontrado pela multiplicação da equação por um <b>fator apropriado</b>. Para isso, nós realizamos a multiplicação da equação $(2)$ por uma função $\mu(t)$, que resultará em 
+        <div class="equationr">
+            \[\mu(t)y'+\mu(t)p(t)y=\mu(t)g(t). \tag 3\]
+        </div>
 
         Se nós definirmos $\mu'(t)=\mu(t)\cdot p(t)$, ao substituir em $(3)$, nós teremos: \[\mu(t)y'+\mu'(t)y=\mu(t)g(t) \tag 4\]
 
-        Se nós considerarmos que $\mu(t)$ é estritamente positivo, nós podemos dividir $(4)$ por $\mu(t)$, ficando \begin{align*} \frac{\mu(t)}{\mu(t)}y'+\frac{\mu'(t)}{\mu(t)}y&=\frac{\mu(t)g(t)}{\mu(t)} \\ \frac{{\color{red}\cancel{\mu(t)}}}{\color{red}\cancel{\mu(t)}}y'+\frac{\mu'(t)}{\mu(t)}y&= \frac{{\color{red}\cancel{\mu(t)}}g(t)}{\color{red}\cancel{\mu(t)}} \\ y'+\frac{\mu'(t)}{\mu(t)}y&=g(t) \tag 5\end{align*}
+        Se nós considerarmos que $\mu(t)$ é estritamente positivo, nós podemos dividir $(4)$ por $\mu(t)$, ficando 
+        <div class="equationr">
+            \begin{align*} \frac{\mu(t)}{\mu(t)}y'+\frac{\mu'(t)}{\mu(t)}y&=\frac{\mu(t)g(t)}{\mu(t)} \\ \frac{{\color{red}\cancel{\mu(t)}}}{\color{red}\cancel{\mu(t)}}y'+\frac{\mu'(t)}{\mu(t)}y&= \frac{{\color{red}\cancel{\mu(t)}}g(t)}{\color{red}\cancel{\mu(t)}} \\ y'+\frac{\mu'(t)}{\mu(t)}y&=g(t) \tag 5\end{align*}
+        </div>
 
         Se compararmos $(5)$ com $(2)$, podemos observar que \[p(t) = \frac{\mu'(t)}{\mu(t)} \tag 6\]
 
@@ -204,17 +221,31 @@
         Nós definimos que o fator integrante multiplicará toda a equação $(2)$ e embora existam infinitas opções para múltiplos de $e^{\int{p(t)}dt}$, todos irão produzir os mesmos resultados. Dessa forma, podemos tomar $C=0$, logo \begin{align*} 
         e^{\int{p(t)}dt} &= \mu(t)\cdot e^C \\ e^{\int{p(t)}dt} &= \mu(t)\cdot e^0 \\ e^{\int{p(t)}dt} &= \mu(t)\cdot 1 \\ e^{\int{p(t)}dt}&= \mu(t) \tag{10}\end{align*}
 
-        Acima nós descobrimos o fator integrante, agora se nós voltarmos para $(4)$, podemos observar que $\mu(t)y'+\mu'(t)y$ é exatamente a derivada de um produto, pois \[\dfrac{d}{dt}[\mu(t)\cdot y]=\mu(t)y'+\mu'(t)y \tag{11}\]
+        Acima nós descobrimos o fator integrante, agora se nós voltarmos para $(4)$, podemos observar que $\mu(t)y'+\mu'(t)y$ é exatamente a derivada de um produto, pois 
+        <div class="equationr"> 
+            \[\dfrac{d}{dt}[\mu(t)\cdot y]=\mu(t)y'+\mu'(t)y \tag{11}\]
+        </div>
 
-        Substituindo $\mu(t)y'+\mu'(t)y$ por $\dfrac{d}{dt}[\mu(t)\cdot y]$ em $(4)$, teremos que o primeiro membro da nossa equação será igual a \begin{align*} \mu(t)y'+\mu'(t)y&=\mu(t)g(t) \\ \frac{d}{dt}[\mu(t)\cdot y] &= \mu(t)g(t). \tag{12}\end{align*}
+        Substituindo $\mu(t)y'+\mu'(t)y$ por $\dfrac{d}{dt}[\mu(t)\cdot y]$ em $(4)$, teremos que o primeiro membro da nossa equação será igual a <div class="equationr">\begin{align*} \mu(t)y'+\mu'(t)y&=\mu(t)g(t) \\ \frac{d}{dt}[\mu(t)\cdot y] &= \mu(t)g(t). \tag{12}\end{align*}</div>
 
-        Integrando $(12)$ em ambos os lados: \[\displaystyle\int{\frac{d}{dt}[\mu(t)\cdot y]} \ dt = \displaystyle\int{\mu(t)g(t)} \ dt \tag{13}\]
+        Integrando $(12)$ em ambos os lados: 
+        <div class="equationr">
+            \[\displaystyle\int{\frac{d}{dt}[\mu(t)\cdot y]} \ dt = \displaystyle\int{\mu(t)g(t)} \ dt \tag{13}\] 
+        </div>
 
-        Sabemos que a integral da derivada de uma função $f$ é a própria função $f$, logo: \[\mu(t)\cdot y = \displaystyle\int{\mu(t)g(t)} \ dt +K\]
+        Sabemos que a integral da derivada de uma função $f$ é a própria função $f$, logo: 
+        <div class="equationr">
+            \[\mu(t)\cdot y = \displaystyle\int{\mu(t)g(t)} \ dt +K\]
+        </div>
 
-        Isolando $y$, ficaremos com seguinte solução geral de uma equação diferencial \[
-        y=\frac{1}{\mu(t)}\Big[\displaystyle\int{\mu(t)g(t)\,dt +K\Big]},\] em que $K$ é uma constante de integração e $\mu(t)$ é dado por $e^{\int{p(t)}\,dt}$. Desse modo, nós descobrimos a solução geral de uma EDO e é importante citar que toda solução de $(2)$ satisfaz a equação abaixo \[y=\frac{1}{\mu(t)}\Big[\displaystyle\int{\mu(t)g(t)dt +K\Big]}, \quad \text{com}\ \mu(t)=e^{\int{p(t)}dt} \tag{14}\].
-
+        Isolando $y$, ficaremos com seguinte solução geral de uma equação diferencial 
+        <div class="equationr">
+            \[y=\frac{1}{\mu(t)}\Big[\displaystyle\int{\mu(t)g(t)\,dt +K\Big]},\]
+        </div>
+        em que $K$ é uma constante de integração e $\mu(t)$ é dado por $e^{\int{p(t)}\,dt}$. Desse modo, nós descobrimos a solução geral de uma EDO e é importante citar que toda solução de $(2)$ satisfaz a equação abaixo 
+        <div class="equationr">
+            \[y=\frac{1}{\mu(t)}\Big[\displaystyle\int{\mu(t)g(t)dt +K\Big]}, \quad \text{com}\ \mu(t)=e^{\int{p(t)}dt} \tag{14}\].
+        </div>
         Geometricamente $(14)$ define uma família de curvas dado determinado valor de $K$. 
     </p>
     <h5>Exemplo 4.</h5>
